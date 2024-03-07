@@ -1,6 +1,4 @@
-**Project Name** (Choose one of the names we brainstormed!) 🚀
-
-*Short Description* (Pick one of the descriptions we wrote.)
+**Shufflefy** 🚀
 
 **How It Works** ✨
 
@@ -25,7 +23,7 @@ pip install spotipy flask
 
 **Contributing** 🤝
 
-We welcome contributions to improve this project! Feel free to open issues, submit pull requests, or share your ideas. 
+I welcome contributions to improve this project! Feel free to open issues, submit pull requests, or share your ideas. 
 
 **Additional Notes**
 
