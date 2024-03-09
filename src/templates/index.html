@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy and Shuffle Spotify Playlists</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 500px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+        }
+        form {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #343a40;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ced4da;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Shufflefy</h1>
+        <!-- Form for copying playlists -->
+        <form action="/copy_playlist" method="POST">
+            <label for="copy_playlist_link">Enter Spotify Playlist Link to Copy:</label><br>
+            <input type="text" id="copy_playlist_link" name="playlist_link" placeholder="https://open.spotify.com/playlist/...">
+            <input type="submit" value="Copy Playlist">
+        </form>
+        <br>
+        <!-- Form for shuffling playlists -->
+        <form action="/shuffle_playlist" method="POST">
+            <label for="shuffle_playlist_link">Enter Spotify Playlist Link to Shuffle:</label><br>
+            <input type="text" id="shuffle_playlist_link" name="playlist_link" placeholder="https://open.spotify.com/playlist/...">
+            <input type="submit" value="Shuffle Playlist">
+        </form>
+    </div>
+</body>
+</html>
