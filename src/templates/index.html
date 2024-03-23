@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copy and Shuffle Spotify Playlists</title>
+    <title>Shufflefy</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -50,24 +50,32 @@
         input[type="submit"]:hover {
             background-color: #0056b3;
         }
+        .status {
+            text-align: center;
+            margin-top: 20px;
+            color: green;
+        }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("copy_playlist_form").addEventListener("submit", function() {
+                document.getElementById("copy_playlist_button").disabled = true;
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>Shufflefy</h1>
         <!-- Form for copying playlists -->
-        <form action="/copy_playlist" method="POST">
+        <form action="/copy_playlist" method="POST" id="copy_playlist_form">
             <label for="copy_playlist_link">Enter Spotify Playlist Link to Copy:</label><br>
             <input type="text" id="copy_playlist_link" name="playlist_link" placeholder="https://open.spotify.com/playlist/...">
-            <input type="submit" value="Copy Playlist">
+            <input type="submit" value="Copy Playlist" id="copy_playlist_button">
         </form>
-        <br>
         <!-- Form for shuffling playlists -->
         <form action="/shuffle_playlist" method="POST">
             <label for="shuffle_playlist_link">Enter Spotify Playlist Link to Shuffle:</label><br>
             <input type="text" id="shuffle_playlist_link" name="playlist_link" placeholder="https://open.spotify.com/playlist/...">
             <input type="submit" value="Shuffle Playlist">
-        </form>
-    </div>
-</body>
-</html>
+        </form
